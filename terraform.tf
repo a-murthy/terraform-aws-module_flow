@@ -7,14 +7,15 @@ terraform {
   cloud {
     organization = "amurthy-tfc-org"
     workspaces {
-      name = "terraform-module-create"
+      project = "HashiCafe"
+      name = "terraform-module-mlm"
     }
   }
 
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.24.0"
+      version = "~> 5.46"
     }
   }
   required_version = "~> 1.2"

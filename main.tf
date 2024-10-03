@@ -8,8 +8,8 @@ provider "aws" {
 }
 
 module "vpc" {
-  source  = "terraform-aws-modules/vpc/aws"
-  version = "5.1.2"
+  source  = "app.terraform.io/amurthy-tfc-org/vpc/aws"
+  version = "1.0.6"
 
   name = var.vpc_name
   cidr = var.vpc_cidr
@@ -44,7 +44,7 @@ module "ec2_instances" {
 module "website_s3_bucket" {
   source = "./modules/aws-s3-static-website-bucket"
 
-  bucket_name = "amurthy-test-sept-15-2024"
+  bucket_name = "amurthy-test-oct-01-2024"
 
   tags = {
     Terraform   = "true"
